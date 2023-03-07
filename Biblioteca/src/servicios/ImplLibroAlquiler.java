@@ -26,6 +26,9 @@ public class ImplLibroAlquiler implements InterfazLibroAlquiler {
 		
 		nuevoLibro.setId(calculoNuevoId(listaLibros));
 		listaLibros.add(nuevoLibro);
+		
+		
+		
 
 		return listaLibros;
 	}
@@ -57,8 +60,29 @@ public class ImplLibroAlquiler implements InterfazLibroAlquiler {
 
 		Scanner input = new Scanner(System.in);
 		System.out.println("Que libro quieres alquilar(prestamo)");
+		String nombreLibro = input.next();
+		
+		for (Libro i : listaLibros) {
+			String a =i.getTituloLibro();
+			if(a==nombreLibro) {
+
+				i.setNumEjemplares(i.getNumEjemplares()-1);
+				i.setNumEjemplaresPrestados(i.getNumEjemplaresPrestados()+1);
+				
+			}
+			
+				
+			
+		}
+           
+		
+		//System.out.println(.setTituloLibro(null)); 		 
+		//for (Libro model : listaLibros) 
+           
 		
 		
+		//numEjemplaresPrestados + 1 
+		//numEjemplares - 1
 		
 		
 		return null;
