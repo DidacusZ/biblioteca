@@ -15,9 +15,11 @@ public interface InterfazLibroAlquiler {
 	
 	public List<Libro> ingresarLibros(List<Libro> listaLibros);
 		
-	public List<Libro> prestamo(String nombreLibro);
+	public List<Libro> prestamo(List<Libro> listaLibros);
 	
-	public List<Libro> devolucion(String nombreLibro) ;
+	public List<Libro> devolucion(List<Libro> listaLibros) ;
+
+
 		
 		
 	
